@@ -1,17 +1,8 @@
-from flask import Flask, render_template
-
-app = Flask(__name__)
+# from flask import Flask, render_template
 
 
+# app = Flask(__name__)
 
-app.route('/')
-def main():
-    name = 'Дмитрий'
-    return render_template('D:/Works/IT/Python_Start/FlaskBootCamp/templates/base.html', name = name) # Открывает base при запуске главной страницы
-
-
-if __name__=='__main__':
-    app.run()
 
 
 # @app.route('/')
