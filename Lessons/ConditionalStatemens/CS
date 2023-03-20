@@ -1,0 +1,41 @@
+# user_data = int(input('Введите число: '))
+
+# isHappy = True
+# if isHappy: # Это означает isHappy == True
+#     print('Это означает True')
+    
+# isHappy = False
+# if not isHappy: # Это означает isHappy == False
+#     print('Это означает False')
+# else:
+#     print('asd')
+
+# if user_data != 5:
+#     print('Мы на месте')
+#     if user_data > 6:
+#         print('Number is bigger than 5')
+#     elif user_data < 6: # Это else if. Без двоеточия
+#         print('меньше 6')
+# else:
+#     print("равно 5")
+# print('Этот print не относится к условию')
+
+# isHappy = False
+# if isHappy and user_data == 6: # Если isHappy True И user_data = 6, то print "Yes"
+#     print('Yes')
+# elif user_data == 5:
+#     print('No')
+
+# isHappy = False
+# if isHappy or user_data == 6: # Если isHappy True ИЛИ user_data = 6, то print "Yes"
+#     print('Yes')
+# elif user_data == 5:
+#     print('No')
+
+# data = input()
+# # if data == 'Five':
+# #     number = 5
+# # else:
+# #     number = 0
+# number = 5 if data == 'Five' else 0 # Тернарный оператор   
+# print(number)    
