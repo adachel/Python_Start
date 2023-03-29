@@ -14,3 +14,6 @@ def Decimal(x):
         res = res + int(i) * (2 ** count)
         count += 1
     return res
+
+a = 255
+print(Binary(a))

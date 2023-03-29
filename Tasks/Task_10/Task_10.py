@@ -4,12 +4,24 @@
 # В единственную строку выходного файла OUTPUT.TXT нужно вывести через пробел в порядке возрастания все корни 
 # 3аданного кубического уравнения. Кратные корни следует выводить только один раз.
 
+# input_data = open('D:\Works\IT\Python_Start\Tasks\Task_10\input.txt', 'r')
+# A, B, C, D = map(int, input_data.read().split())
+# res = ''
+# for i in range(-100, 100):
+#     if (A * i ** 3 + B * i ** 2 + C * i + D) == 0:
+#         res = res + ' ' + str(i)
+# output_data = open('D:\Works\IT\Python_Start\Tasks\Task_10\output.txt', 'w')
+# output_data.write(res)   
+# print(res)
+
+def Calc(A, B, C, D):
+    res = ''
+    for i in range(-100, 100):
+        if (A * i ** 3 + B * i ** 2 + C * i + D) == 0:
+            res = res + ' ' + str(i)
+    return res
 input_data = open('D:\Works\IT\Python_Start\Tasks\Task_10\input.txt', 'r')
 A, B, C, D = map(int, input_data.read().split())
-res = ''
-for i in range(-100, 100):
-    if (A * i ** 3 + B * i ** 2 + C * i + D) == 0:
-        res = res + ' ' + str(i)
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_10\output.txt', 'w')
-output_data.write(res)   
-print(res)
+output_data.write(Calc(A, B, C, D))
+print(Calc(A, B, C, D))        
