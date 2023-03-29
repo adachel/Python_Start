@@ -7,24 +7,9 @@ if (a * b) == c: result = 'Yes'
 else: result = 'No'
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_8\output.txt', 'w')
 output_data.write(result)
+print(result)
 
-# Превод из десятичной в двоичную систему
-# a = 9
-# res = ''
-# while a > 0:
-#     res = str(res) + str(a % 2)
-#     a = a // 2
-# print(res)
 
-# Превод из двоичной в десятичную
-# a = 1001
-# a_str = str(a)
-# data = list(a_str)
-# res = 0; count = 0
-# for i in data:
-#     res = res + int(i) * (2 ** count)
-#     count += 1
-# print(res)
 
 
 

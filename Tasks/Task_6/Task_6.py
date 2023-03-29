@@ -30,27 +30,55 @@
 # print(out)
 # print(error)        
      
+# input_data = open('D:\Works\IT\Python_Start\Tasks\Task_6\input.txt', 'r')
+# data = input_data.read()
+# i_data = list(data)
+# data_x = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+# for i in data_x:
+#     if i_data[0] == i:
+#         i_data[0] = data_x.index(i)
+#     if i_data[3] == i:
+#         i_data[3] = data_x.index(i)
+# if len(data) > 5 or data[0] < 'A' or data[3] < 'A' or data[0] > 'H' or data[3] > 'H':
+#     out = 'ERROR'
+# elif data[2] != '-' or int(data[1]) < 1 or int(data[4]) < 1 or int(data[1]) > 8 or int(data[4]) > 8:
+#     out = 'ERROR'
+# elif (abs(i_data[0] - i_data[3]) * abs(int(i_data[1]) - int(i_data[4]))) == 2:
+#     out = 'Yes'
+# else: out = 'No'
+# output_data = open('D:/Works/IT/Python_Start/Tasks/Task_6/output.txt', 'w')
+# output_data.write(out)
+# print(out)
+
+def Indexes(arr):
+    data = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    for i in data:
+        if arr[0] == i:
+            a = data.index(i)
+        if arr[3] == i:
+            b = data.index(i)
+    data_index = str(a) + str(b)
+    return data_index
+def Comparison(arr, arr_index):
+    if len(arr) > 5 or arr[0] < 'A' or arr[3] < 'A' or arr[0] > 'H' or arr[3] > 'H':
+        out = 'ERROR'
+    elif arr[2] != '-' or int(arr[1]) < 1 or int(arr[4]) < 1 or int(arr[1]) > 8 or int(arr[4]) > 8:
+        out = 'ERROR'
+    elif (abs(arr_index[0] - arr_index[1]) * abs(int(arr[1]) - int(arr[4]))) == 2:
+        out = 'Yes'
+    else: out = 'No'
+    return out
 input_data = open('D:\Works\IT\Python_Start\Tasks\Task_6\input.txt', 'r')
 data = input_data.read()
-i_data = list(data)
-data_x = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
-for i in data_x:
-    if i_data[0] == i:
-        i_data[0] = data_x.index(i)
-    if i_data[3] == i:
-        i_data[3] = data_x.index(i)
-if len(data) > 5 or data[0] < 'A' or data[3] < 'A' or data[0] > 'H' or data[3] > 'H':
-    out = 'ERROR'
-elif data[2] != '-' or int(data[1]) < 1 or int(data[4]) < 1 or int(data[1]) > 8 or int(data[4]) > 8:
-    out = 'ERROR'
-elif (abs(i_data[0] - i_data[3]) * abs(int(i_data[1]) - int(i_data[4]))) == 2:
-    out = 'Yes'
-else: out = 'No'
-output_data = open('D:/Works/IT/Python_Start/Tasks/Task_6/output.txt', 'w')
-output_data.write(out)
+data_index = list(map(int, Indexes(data)))
+result = Comparison(data, data_index)
+output_data = open('D:\Works\IT\Python_Start\Tasks\Task_6\output.txt', 'w')
+output_data.write(str(result))
+print(result)
 
 
-print(out)
+
+
 
 
 

@@ -10,11 +10,23 @@
 # resalt = str(number) + '9' + str(num_3)
 # print(resalt)
 
+# input_data = open('D:\Works\IT\Python_Start\Tasks\Task_4\input.txt', 'r')
+# number = int(input_data.read())
+# num_3 = 9 - number
+# resalt = str(number) + '9' + str(num_3)
+# output_data = open('D:\Works\IT\Python_Start\Tasks\Task_4\output.txt', 'w')
+# output_data.write(resalt)
+# print(resalt)
+
+def Count(x):
+    num3 = 9 - x
+    sum_numbers = str(x) + '9' + str(num3)
+    return sum_numbers
 input_data = open('D:\Works\IT\Python_Start\Tasks\Task_4\input.txt', 'r')
 number = int(input_data.read())
-num_3 = 9 - number
-resalt = str(number) + '9' + str(num_3)
+result = Count(number)
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_4\output.txt', 'w')
-output_data.write(resalt)
-print(resalt)
+output_data.write(result)
+print(result)
+
 
