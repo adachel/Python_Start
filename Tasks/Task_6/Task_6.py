@@ -72,8 +72,10 @@ input_data = open('D:\Works\IT\Python_Start\Tasks\Task_6\input.txt', 'r')
 data = input_data.read()
 data_index = list(map(int, Indexes(data)))
 result = Comparison(data, data_index)
+input_data.close()
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_6\output.txt', 'w')
 output_data.write(str(result))
+output_data.close()
 print(result)
 
 

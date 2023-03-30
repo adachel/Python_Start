@@ -22,6 +22,8 @@ def Calc(A, B, C, D):
     return res
 input_data = open('D:\Works\IT\Python_Start\Tasks\Task_10\input.txt', 'r')
 A, B, C, D = map(int, input_data.read().split())
+input_data.close()
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_10\output.txt', 'w')
 output_data.write(Calc(A, B, C, D))
+output_data.close()
 print(Calc(A, B, C, D))        

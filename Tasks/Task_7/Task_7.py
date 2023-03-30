@@ -22,6 +22,10 @@
 input_data = open('D:/Works/IT/Python_Start/Tasks/Task_7/input.txt', 'r')
 data = list(input_data.read().split())
 data_max = max(data)
+input_data.close()
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_7\output.txt', 'w')
 output_data.write(data_max)
+output_data.close()
 print(data_max)
+
+

@@ -37,8 +37,10 @@ def Count(x):
 input_data = open('D:\Works\IT\Python_Start\Tasks\Task_3\input.txt', 'r')
 number = int(input_data.read())
 result = Count(number)
+input_data.close()
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_3\output.txt', 'w')
 output_data.write(result)
+output_data.close()
 print(result)
 
 

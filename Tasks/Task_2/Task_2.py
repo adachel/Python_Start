@@ -24,8 +24,10 @@ def Factorial(x): # ф-ци факториала числа "х"
 input_data = open('D:\Works\IT\Python_Start\Tasks\Task_2\input.txt', 'r')
 number = int(input_data.read())
 factorial = Factorial(number)
+input_data.close()
 output_data = open('D:\Works\IT\Python_Start\Tasks\Task_2\output.txt', 'w')
 output_data.write(str(factorial))
+output_data.close()
 print(factorial)
 
 
