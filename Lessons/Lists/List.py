@@ -17,8 +17,9 @@
 # nums = [5, 6, 2, 8, 10, True, 'Hello', 6.7, [123, 456, 444]] 
 # print(nums[-1][1]) # Вывод элемента вложенного списка
 
-# numbers = [134, 49, 8]
-# numbers.append(112) # Добавляем элемент в список
+numbers = [134, 49, 8]
+numbers.append(112) # Добавляем элемент в список
+print(numbers)
 # numbers.insert(1, True) # Вставляем доп элемент по индексу 1
 # add = [123, 456]
 # numbers.extend(add) # Добавляет список в конец существующего
@@ -35,14 +36,14 @@
 #     element *= 5 # Умноаем все элементы на 5
 #     print(element)
 
-n = int(input('Enter Length: ')) # Задаем длина списка
-user_nums = [] # Создаем пустой список
-i = 0
-while i < n: # Сравнивает только с int
-    string = 'Enter element: ' + str(i + 1) + ': ' # Создаем переменную string
-    user_nums.append(input(string)) # Добавляем элемента в user_nums. Все элементы будут строками!!!
-    i += 1
+# n = int(input('Enter Length: ')) # Задаем длина списка
+# user_nums = [] # Создаем пустой список
+# i = 0
+# while i < n: # Сравнивает только с int
+#     string = 'Enter element: ' + str(i + 1) + ': ' # Создаем переменную string
+#     user_nums.append(input(string)) # Добавляем элемента в user_nums. Все элементы будут строками!!!
+#     i += 1
     
-print(user_nums)
+# print(user_nums)
 
 

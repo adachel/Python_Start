@@ -1,12 +1,16 @@
-N = 4
-K = 3
-C = 0
-a = 0
+def Count(data, n, k):
+    for i in range(1, n + 1):
+        data.append(sum(data[max(0, i - k) : i]))
+    return data
 
-for i in range(0, K):
-    if i > 0:
-        a = (a + 1)*2
-    for j in range(1, N + 1):
-        if i + j == N:
-            C = C + a + 1
-print(C)
+input_data = open('D:\Works\IT\Python_Start\Tasks\Task_11\input.txt', 'r')
+n , k = map(int, input_data.read().split())
+input_data.close()
+data = [1]
+Count(data, n, k)
+output_data = open('D:\Works\IT\Python_Start\Tasks\Task_11\output.txt', 'w')
+output_data.write(str(data[n]))
+print(Count(data, n, k))
+print(data[n])
+    
+
