@@ -7,6 +7,13 @@
 # a, b, c = map(int, input_data.read().split()) # Забираем данные и распределяем по a, b, c
 # print(max(a, max(b, c))) # Ищем мах из трех
 
-
+# ВВОД И ВЫВОД ЭЛЕМЕНТОВ В СПИСОК
+n = int(input("Введите длину списка:"))
+a = []
+for i in range(0, n):
+    element = int(input("Введите элемент списка:"))
+    a.append(element)
+print("Весь список:")
+print(a)
 
 
