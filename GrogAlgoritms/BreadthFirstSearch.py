@@ -11,7 +11,7 @@ graph = {
 }
 
 def person_is_seller(name):
-    return name[-1] == 'd'
+    return name[-1] == 'y'
 
 def search(name):
     search_queue = deque() # Создаем очередь
