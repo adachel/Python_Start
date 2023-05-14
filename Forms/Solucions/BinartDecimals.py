@@ -6,6 +6,13 @@ def Binary(x):
         x = x // 2
     return res
 
+def Bin(x): # Рекурсивно
+    if x <= 1:
+        return '1'
+    else:
+        res = str(x % 2) + str(Bin(x // 2))
+    return res
+
 # Превод из двоичной в десятичную
 def Decimal(x):
     data = list(str(x))
