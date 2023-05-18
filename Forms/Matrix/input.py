@@ -1,3 +1,9 @@
+# Считываем матрицу из файла
+data = []
+with open('Путь к файлу txt', 'r') as input_data:
+    for line in input_data:
+        data.append([int(x) for x in line.split()])
+
 # Заполнение матрицы значениями с клавиатуры
 
 n = 5
