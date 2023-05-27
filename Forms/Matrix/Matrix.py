@@ -34,3 +34,15 @@ print()
 
 for row in A:
     print(' '.join(list(map(str, row))))
+    
+# Матрица из нулей
+def Matrix(n):
+    arr = [0 for i in range(n)]
+    matrix = [arr for x in range(n)]
+    return matrix
+    
+def Print_Matrix(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            print(arr[i][j], end= ' ')
+        print()

@@ -18,14 +18,15 @@
 # print('Результат сложения: ', summa)
 
 summa = lambda x, y: x + y # Создали lambda-фун-цию
-input_data = open('D:\Works\IT\Python_Start\Tasks\Task_1\input.txt', 'r')
+input_data = open('D:\Works\IT\Python_Start\Tasks\Difficulty_1_10\Task_1\input.txt', 'r')
 A, B = map(int, input_data.read().split()) # Присваиваем А и В значения из файла
 res = summa(A, B) # res - присваиваем значение ф-ции summa
 input_data.close()
-output_data = open('D:\Works\IT\Python_Start\Tasks\Task_1\output.txt', 'w')
+output_data = open('D:\Works\IT\Python_Start\Tasks\Difficulty_1_10\Task_1\output.txt', 'w')
 output_data.write(str(res))
 output_data.close()
 print(res)
+
 
 
 
