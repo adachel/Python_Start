@@ -52,11 +52,11 @@ def Comparison(list1, list2):
         result = 'Yes'
     else: result = 'No'
     return result
-input_data = open('D:\Works\IT\Python_Start\Tasks\Task_5\input.txt', 'r')
+input_data = open('D:\Works\IT\Python_Start\Tasks\Difficulty_11_20\Task_5\input.txt', 'r')
 N = int(input_data.readline())
 data = input_data.readline().split()
 input_data.close()
-output_data = open('D:\Works\IT\Python_Start\Tasks\Task_5\output.txt', 'w')
+output_data = open('D:\Works\IT\Python_Start\Tasks\Difficulty_11_20\Task_5\output.txt', 'w')
 output_data.writelines(str(Calc_odd(data, N)) + '\n')
 output_data.writelines(str(Calc_even(data, N)) + '\n')
 output_data.writelines(Comparison(Calc_even(data, N), Calc_odd(data, N)))

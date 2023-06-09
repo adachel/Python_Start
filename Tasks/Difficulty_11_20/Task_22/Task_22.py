@@ -8,17 +8,15 @@ def Bin(x):     # Перевод в двоичную рекурсивно.
     return res
 
 def Count(x):   # Считает кол-во '1' в двоичном числе
-    count = 0
-    for i in x:
-        if i == '1':
-            count += 1
-    return count
+    data = list(map(int, x))
+    res = data.count(1)
+    return res
         
-input_data = open('D:\Works\IT\Python_Start\Tasks\Task_22\input.txt', 'r')
+input_data = open('D:\Works\IT\Python_Start\Tasks\Difficulty_11_20\Task_22\input.txt', 'r')
 num = int(input_data.read())
 input_data.close()
 num_str = list(Bin(num)) # Перевод двоичного числа в список
-output_data = open('D:\Works\IT\Python_Start\Tasks\Task_22\output.txt', 'w')
+output_data = open('D:\Works\IT\Python_Start\Tasks\Difficulty_11_20\Task_22\output.txt', 'w')
 output_data.write('Result: ' + str(Count(num_str)))
 output_data.close()
 

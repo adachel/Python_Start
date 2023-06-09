@@ -41,8 +41,23 @@ def Matrix(n):
     matrix = [arr for x in range(n)]
     return matrix
     
-def Print_Matrix(arr):
+def Print_Matrix(arr): # вывод матрицы
     for i in range(len(arr)):
         for j in range(len(arr[i])):
             print(arr[i][j], end= ' ')
         print()
+        
+# Матрица от 1 до 64 8х8
+import numpy as np
+a = np.arange(1, 65).reshape(8, 8)
+
+matrix = []
+for i in range(0, 64, 8):
+    arr = []
+    for j in range(1, 9):
+        arr.append(j + i)
+    matrix.append(arr)
+    
+indices = [(i, x.index(2)) for i, x in enumerate(matrix) if 2 in x] # индекс элемента в матрице
+    
+print(a, matrix)
