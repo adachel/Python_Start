@@ -4,7 +4,7 @@ def Calc(n):
     res = int(n[0]) + int(n[1]) + int(n[2])
     return res
 # n = input('Введите трехзначное число: ')
-# if len(n) == 3: print('Результат: ' + str(Calc(n)))
+# if len(n) == 3 and n.isdigit() == True: print('Результат: ' + str(Calc(n)))
 # else: print('Введите трехзначное число!')
 
 
@@ -32,7 +32,7 @@ def HappyTicket(n):
     else: res = 'Простой билет'
     return res
 # n = input('Введите шестизначный номер билета: ')
-# if len(n) == 6: print(HappyTicket(n)) 
+# if len(n) == 6 and n.isdigit(): print(HappyTicket(n)) 
 # else: print('Введите шестизначный номер билета!')
 
 # Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, 
