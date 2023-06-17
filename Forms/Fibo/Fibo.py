@@ -21,8 +21,23 @@ def RecFibo(n):
     if n == 1: return 1
     return RecFibo(n - 1) + RecFibo(n - 2)
     
+def Iter(n):
+    a = [0,1]
+    for i in range(1, n):
+        x = a[i] + a[i-1] 
+        a.append(x)
+        res = a[-1]
+    return res
+
+def Calc(n):
+    if n == 1 or n == 2: return 1
+    return Calc(n - 1) + Calc(n - 2)    
+
 n = 10
+
 print(Fibo(n))
-# print(Fib(n))
-# print(RecFibo(n))
+print(Fib(n))
+print(RecFibo(n))
+print(Iter(n))
+print(Calc(n))
         
