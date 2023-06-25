@@ -65,5 +65,5 @@ def Round_Count(n):
             res = res + ' ' + str(i)
     return res
 
-N = int(input('Введите число: '))
-print('Результат: ' + Round_Count(N))
+# N = int(input('Введите число: '))
+# print('Результат: ' + Round_Count(N))
