@@ -3,22 +3,37 @@
 
 def Func(arr):
     arr = arr.split()
-    data = []
-    count_a = 0
-    count_b = 0
-    count_c = 0
-    count_d = 0
     for i in range(len(arr)):
-        if arr[i + 1] == arr[i] == 'a': count_a += 1
-        if arr[i + 1] == arr[i] == 'b': count_b += 1
-        if arr[i + 1] == arr[i] == 'c': count_c += 1
-        if arr[i + 1] == arr[i] == 'd': count_d += 1
-    print(arr)
-    
-    
-    
-    
+        counter = 1
+        for j in range(i + 1, len(arr)):
+            if arr[i] == arr[j]:
+                arr[j] = arr[j] + f'_{counter}'
+                counter += 1
+    return arr
+
+# arr = 'a a a b c a a d c d d'
+# print(Func(arr))
+
+
+# Задача №27. Пользователь вводит текст(строка). Словом считается последовательность непробельных символов идущих подряд, 
+# слова разделены одним или большим числом пробелов. Определите, сколько различных слов содержится в этом тексте.
+
+def Words(arr):
+    arr = arr.upper()
+    arr = arr.split( )
+    data = set(arr)
+    return len(data)
+
+arr = "She sells sea shells on the sea shore The shells that she sells are sea shells I'm sure.So if she sells sea shells on the sea shore I'm sure that the shells are sea shore shells"
+print(Words(arr))
+
+
+# Задача №29. Ваня и Петя поспорили, кто быстрее решит следующую задачу: “Задана последовательность неотрицательных 
+# целых чисел. Требуется определить значение наибольшего элемента последовательности, которая завершается 
+# первым встретившимся нулем (число 0 не входит в последовательность)”. Однако 2 друга оказались не такими смышлеными. 
+# Никто из ребят не смог до конца сделать это задание. Они решили так: у кого будет меньше ошибок в коде, тот и выиграл спор. 
+# За помощью товарищи обратились к Вам, студентам.
+
+def Too(arr):
     pass
 
-arr = 'a a a b c a a d c d d'
-Func(arr)
