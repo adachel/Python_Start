@@ -61,3 +61,12 @@ for i in range(0, 64, 8):
 indices = [(i, x.index(2)) for i, x in enumerate(matrix) if 2 in x] # индекс элемента в матрице
     
 print(a, matrix)
+
+
+# таблица умножения
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+    for i in a:
+        print(*[f"{x:>3}" for x in i])
+
+print_operation_table(lambda x, y: x * y)
