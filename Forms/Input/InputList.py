@@ -16,4 +16,9 @@ for i in range(0, n):
 print("Весь список:")
 print(a)
 
+N = int(input('Введите N: '))
+print(N)
+li1 = [int(input('Введите число: ')) for _ in range(N)]
+print(*li1)
+
 

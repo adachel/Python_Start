@@ -48,14 +48,19 @@ def Func(n):
 # Задача №37. Дано натуральное число N и последовательность из N элементов. Требуется вывести эту последовательность 
 # в обратном порядке. Примечание. В программе запрещается объявлять массивы и использовать циклы (даже для ввода и вывода).
 
-def Too(n, arr, data = []):
-    
-    if n == 0: return data
+def Too1(n, arr, data = []):
+    if n == 0: 
+        data.append(arr[n])
+        return data
     data.append(arr[n])
-    Too(n - 1, arr)
+    return Too1(n - 1, arr)
+
+def Too2(arr):
+    data = arr[::-1]
+    return data
     
-  
-    
-n = 2
-arr = '3 4'
-print(Too(n, arr))
+arr = '3 4 5 6 7'
+print(Too2(arr))
+arr = arr.split()
+n = len(arr)-1
+print(*Too1(n, arr))
