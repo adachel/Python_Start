@@ -4,56 +4,73 @@ from view import *
 def main():
     while True:
         num = Input_Num()
-        if num == 1:              
-            print()
+        
+        if num == 1:      # Запись        
             res = Input_Name()
             Write_Name(res)
             print("Успешно записано\n")
             print()
-        if num == 2:               
-            print()
+            
+        if num == 2:      # Поиск   
             char = Input_Char()
-            if char == 1:
-                print()
+            if char == 1:  # по ID
                 ID = Input_ID()
                 res_search = Search_Data(ID, 0, 0)
-            if char == 2:
-                print()
+            if char == 2:   # по фамилии
                 lastName = Input_LastName()
                 res_search = Search_Data(lastName, 1, 0)
-            if char == 3:
-                print()
+            if char == 3:   # поимени
                 firstName = Input_FirstName()
-                res_search = Search_Data(firstName, 1)     
-            if char == 4:
-                print() 
+                res_search = Search_Data(firstName, 1, 1)  
+            if char == 4:   # по телефону
                 phone = Input_Phone()
-                res_search = Search_Data(phone, 2)    
-            print()    
+                res_search = Search_Data(phone, 2, 0)        
+            print()
             print(res_search)
             print()
+        
         if num == 3:                # сортировка
-            print()
             char = Input_Sort()
             if char == 1:
-                print()
                 res_sort = Sort_list_ID_Phone(0)
             if char == 2:
-                print()
                 res_sort = Sort_list_Name(1)
             if char == 3:
-                print() 
                 res_sort = Sort_list_ID_Phone(2)
+            print()
             for i in res_sort:    
                 print(i)
             print()
-        if num == 5:               
+                
+        if num == 4:    # Удаление
+            char = Input_Char()
+            if char == 1:  # по ID
+                ID = Input_ID()
+                res_search = Search_Data(ID, 0, 0)
+                res_new = Remove(res_search)
+            if char == 2:   # по фамилии
+                lastName = Input_LastName()
+                res_search = Search_Data(lastName, 1, 0)
+                res_new = Remove(res_search)
+            if char == 3:   # поимени
+                firstName = Input_FirstName()
+                res_search = Search_Data(firstName, 1, 1)  
+                res_new = Remove(res_search)
+            if char == 4:   # по телефону
+                phone = Input_Phone()
+                res_search = Search_Data(phone, 2, 0)  
+                res_new = Remove(res_search)   
+            print()       
+            print(res_new)
             print()
+            
+        if num == 5:    # Вывод всего списка           
             res = Print_All()
             for i in res:
                 print(i)
             print()
-        if num == 6:
+                
+        if num == 6:    # Выход из программы
             break
             
 
