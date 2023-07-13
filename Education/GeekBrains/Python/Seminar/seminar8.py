@@ -28,22 +28,10 @@
 #     print(args[0])
 # ff(1, 2)
 
+with open('D:/Works/IT/Python_Start/Education/GeekBrains/Python\HomeWork/Tel/telephone.txt', 'r', encoding='utf-8') as file:
+        lst = list(map(lambda x: x.strip(), file.readlines()))
 
-with open('D:/Works/IT/Python_Start/Education/GeekBrains/Python/Seminar/Tel/telephone.txt', 'r', encoding='utf-8') as file:
-    lst = list(map(lambda x: x.strip(), file.readlines()))
-        
-    a = '11,Иванов Иван Иванович,12\n2,Иванов Петр Иванович,20\n'
-    a = list(a.split('\n'))
-    for row in a:
-        if row in lst:
-                lst.remove(row)
-    print(a)
-    print(lst)
-    
-
-with open('D:/Works/IT/Python_Start/Education/GeekBrains/Python/Seminar/Tel/telephone.txt', 'w', encoding='utf-8') as file:
-    for row in lst:
-        file.write(str(row) + '\n')
+print(lst)
         
         
         
